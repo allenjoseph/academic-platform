@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app',
@@ -12,10 +12,14 @@ import { Component } from '@angular/core';
     </div>
     `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 	public title = 'Tour of Heroes';
 	public hero = {
 		id: 1,
 		name: 'Windstorm'
 	};
+
+	public ngOnInit() {
+		console.log('Initial App State');
+	}
 }

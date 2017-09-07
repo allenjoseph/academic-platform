@@ -9,6 +9,12 @@ import { decorateModuleRef } from './app/environment';
  */
 import { AppModuleNgFactory } from '../compiled/src/client/app/app.module.ngfactory';
 /**
+ * Some components rely on HammerJS for gestures.
+ * In order to get the full feature-set of these components,
+ * HammerJS must be loaded into the application.
+ */
+import 'hammerjs';
+/**
  * Bootstrap our Angular app with a top level NgModule.
  */
 export function main(): Promise<any> {

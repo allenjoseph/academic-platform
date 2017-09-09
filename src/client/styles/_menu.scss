@@ -1,0 +1,24 @@
+.main-menu {
+	background: white;
+	height: 48px;
+	min-height: 48px;
+	max-height: 48px;
+	position: relative;
+	width: 100%;
+	z-index: 22;
+
+	&--fixed {
+		position: fixed;
+	}
+
+	> .mat-button {
+		font-weight: lighter;
+		font-size: 18px;
+	}
+
+	.button--with-icon{
+		padding-left: 0;
+		padding-right: 0;
+		min-width: 48px;
+	}
+}

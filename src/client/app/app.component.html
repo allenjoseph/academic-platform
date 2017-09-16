@@ -3,12 +3,25 @@
 		<button md-button class="button--with-icon" color="primary" (click)="openSidenav = !openSidenav">
 			<md-icon class="md-24 material-icons">menu</md-icon>
 		</button>
-		<button md-button color="primary">Plataforma Academica</button>
+		<button md-button color="primary" routerLink="/home">Plataforma Académica</button>
 	</div>
 </div>
 <div class="main-content">
 	<md-sidenav-container>
-		<md-sidenav mode="side" [opened]="openSidenav">Side nav</md-sidenav>
-		<div class="page-content" fxFlex><span>Main content</span></div>
+		<md-sidenav mode="side" [opened]="openSidenav">
+			<md-nav-list>
+				<a md-list-item *ngFor="let route of routes" routerLink="/home">
+					<md-icon mdListIcon class="material-icons">star</md-icon>
+					<span mdLine>Novedades</span>
+				</a>
+				<a md-list-item routerLink="/diary">
+					<md-icon mdListIcon class="material-icons">today</md-icon>
+					<span mdLine>Agenda</span>
+				</a>
+			</md-nav-list>
+		</md-sidenav>
+		<div class="page-content" fxFlex>
+			<router-outlet></router-outlet>
+		</div>
 	</md-sidenav-container>
 </div>

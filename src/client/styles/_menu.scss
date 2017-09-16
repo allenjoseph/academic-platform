@@ -17,8 +17,10 @@
 	}
 
 	.button--with-icon{
-		padding-left: 0;
-		padding-right: 0;
-		min-width: 48px;
+		min-width: 40px;
+		md-icon {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
 	}
 }

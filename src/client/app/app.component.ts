@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
+import { ROUTES_VM } from './app.routes';
 
 @Component({
 	/**
 	 * The selector is what angular internally uses
 	 * for `document.querySelectorAll(selector)` in our index.html
-	 * where, in this case, selector is the string 'home'.
+	 * where, in this case, selector is the string 'app'.
 	 */
 	selector: 'app',
 	/**
@@ -15,6 +16,7 @@ import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 })
 export class AppComponent implements OnInit {
 	public openSidenav = true;
+	public routes = ROUTES_VM;
 
 	constructor(media: ObservableMedia) {
 		media.asObservable().subscribe((change: MediaChange) => {

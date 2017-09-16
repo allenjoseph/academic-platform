@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-import { MaterialModule } from './material/material.module';
-import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
 
+import { AppComponent } from './app.component';
 import { ENV_PROVIDERS } from './environment';
+import { ROUTES } from './app.routes';
+
+import { MaterialModule } from './material';
+import { DiaryComponent } from './diary';
+import { HomeComponent } from './home';
+
 /**
  * Some components rely on HammerJS for gestures.
  * In order to get the full feature-set of these components,
@@ -28,10 +34,13 @@ const APP_PROVIDERS = [
 		BrowserAnimationsModule,
 		FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
 		MaterialModule,
-		FlexLayoutModule
+		FlexLayoutModule,
+		RouterModule.forRoot(ROUTES)
 	],
 	declarations: [
-		AppComponent
+		AppComponent,
+		DiaryComponent,
+		HomeComponent
 	],
 	providers: [
 		ENV_PROVIDERS,

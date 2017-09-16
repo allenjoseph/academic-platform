@@ -2,7 +2,6 @@ html,
 body,
 material-app,
 md-sidenav-container,
-.main-container,
 .main-content,
 .page-content {
 	margin: 0;
@@ -11,8 +10,8 @@ md-sidenav-container,
 	font-family: 'Roboto-Regular';
 }
 
-.main-container {
-	position: relative;
+.main-content {
+	height: calc(100% - 48px);
 }
 
 md-sidenav {

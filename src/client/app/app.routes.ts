@@ -8,7 +8,7 @@ export const ROUTES: Routes = [
 	{ path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
-export const ROUTES_VM: any[] = [
+export const SIDE_NAV: any[] = [
 	{ path: 'home', name: 'Novedades', icon: 'start' },
 	{ path: 'diary', name: 'Agenda', icon: 'today' }
 ];

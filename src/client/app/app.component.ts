@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
-import { ROUTES_VM } from './app.routes';
+import { SIDE_NAV } from './app.routes';
 
 @Component({
 	/**
@@ -16,7 +16,7 @@ import { ROUTES_VM } from './app.routes';
 })
 export class AppComponent implements OnInit {
 	public openSidenav = true;
-	public routes = ROUTES_VM;
+	public routes = SIDE_NAV;
 
 	constructor(media: ObservableMedia) {
 		media.asObservable().subscribe((change: MediaChange) => {

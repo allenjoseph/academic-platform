@@ -226,6 +226,16 @@ module.exports = function (options) {
 				// poll: 1000,
 				ignored: /node_modules/
 			},
+			proxy: {
+				'/graphql': {
+					target: {
+						host: METADATA.host,
+						port: 4000,
+						changeOrigin: true,
+						secure: false
+					}
+				}
+			},
 			/**
 			* Here you can access the Express app object and add your own custom middleware to it.
 			*

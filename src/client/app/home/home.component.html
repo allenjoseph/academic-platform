@@ -1,1 +1,7 @@
-Welcome Home
+<md-spinner *ngIf="loadingFeeds"></md-spinner>
+<md-card class="feed" *ngFor="let feed of feeds | async">
+	<md-card-header>
+		<md-card-title>{{feed.title}}</md-card-title>
+	</md-card-header>
+	<md-card-content [innerHtml]="feed.description"></md-card-content>
+</md-card>

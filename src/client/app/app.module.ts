@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ENV_PROVIDERS } from './environment';
@@ -35,7 +36,8 @@ const APP_PROVIDERS = [
 		FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
 		MaterialModule,
 		FlexLayoutModule,
-		RouterModule.forRoot(ROUTES)
+		RouterModule.forRoot(ROUTES),
+		HttpModule
 	],
 	declarations: [
 		AppComponent,

@@ -26,7 +26,7 @@ const ngcWebpack = require('ngc-webpack');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = process.env.BUILD_AOT || helpers.hasNpmFlag('aot');
 const METADATA = {
-	title: 'Angular Webpack Starter',
+	title: 'Academic Platform',
 	baseUrl: '/',
 	isDevServer: helpers.isWebpackDevServer(),
 	HMR: HMR
